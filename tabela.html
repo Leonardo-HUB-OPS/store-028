@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque - Método Moreira</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #fafafa;
+            text-align: center;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        th {
+            background: #333;
+            color: white;
+        }
+        img {
+            width: 120px;
+            border-radius: 10px;
+        }
+        .voltar {
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📦 Estoque de Produtos</h1>
+    <div class="aviso">
+        ⚠️ Antes de comprar, entre em contato pelo WhatsApp: 
+        <a href="https://wa.me/5551983077917" target="_blank">Clique aqui</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>Imagem</th>
+            <th>Produto</th>
+            <th>Ação</th>
+        </tr>
+        <tr>
+            <td><img src="imagens/metodo-moreira.jpg" alt="Método Moreira"></td>
+            <td>Método Moreira</td>
+            <td><button onclick="adicionar('imagens/metodo-moreira.jpg')">Adicionar</button></td>
+        </tr>
+        <tr>
+            <td><img src="imagens/metodo-moreira-plus.jpg" alt="Método Moreira Plus"></td>
+            <td>Método Moreira Plus</td>
+            <td><button onclick="adicionar('imagens/metodo-moreira-plus.jpg')">Adicionar</button></td>
+        </tr>
+        <tr>
+            <td><img src="imagens/metodo-moreira-premium.jpg" alt="Método Moreira Premium"></td>
+            <td>Método Moreira Premium</td>
+            <td><button onclick="adicionar('imagens/metodo-moreira-premium.jpg')">Adicionar</button></td>
+        </tr>
+    </table>
+
+    <a href="index.html" class="voltar">⬅️ Voltar para a Vitrine</a>
+
+    <script>
+        function adicionar(imagem) {
+            alert("Produto adicionado ao carrinho! 🛍️\nLembre-se de entrar em contato antes de comprar.");
+            const img = document.createElement("img");
+            img.src = imagem;
+            img.width = 120;
+            document.body.appendChild(img);
+        }
+    </script>
+
+</body>
+</html>
